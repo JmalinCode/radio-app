@@ -8,14 +8,6 @@ body {
 img {
     max-width: 100%;
 }
-/* 
-input[type="range"] {
-    overflow: hidden;
-    width: 100px;
-    -webkit-appearance: none;
-    height: 8px;
-    margin: 0;
-} */
 
 .wrapper {
     min-height: 100vh;
@@ -55,7 +47,6 @@ input[type="range"] {
 }
 
 .radio-tools-container {
-    /* height: 100%; */
     flex: 1 400px;
     display: flex;
 

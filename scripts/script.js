@@ -17,15 +17,16 @@ playPauseButton.onclick = function (){
 }
 
 volumeButton.onclick = function (){
-    console.log(audioPlayer.currentTime) //delete later
-
     if (volumeButton.src.slice(-13) === 'volume-on.png') {
         volumeButton.src = 'img/no-volume.png';
         volume = volumeRange.value;
         volumeRange.value = '0';
+        audioPlayer.volume = 0;
     } else if (volumeButton.src.slice(-13) === 'no-volume.png'){
         volumeButton.src = 'img/volume-on.png';
         volumeRange.value = volume;
+        console.log(typeof(volume))
+        audioPlayer.volume = +volume/100;
     }
 }
 
