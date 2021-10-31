@@ -1,0 +1,149 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+/* 
+input[type="range"] {
+    overflow: hidden;
+    width: 100px;
+    -webkit-appearance: none;
+    height: 8px;
+    margin: 0;
+} */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/lightstrike.jpg");
+    background-position: center;
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+    background: black;
+}
+
+.container{
+    max-width: 700px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-div {
+    margin-left: 5px;
+    flex: 0 135px;
+}
+
+.logo {
+    transition: 0.5s;
+    width: 100%;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.radio-tools-container {
+    /* height: 100%; */
+    flex: 1 400px;
+    display: flex;
+
+    padding-top: 30px;
+    
+    align-items: center;
+}
+
+.play-pause-btn {
+    margin-left: 5px;
+    flex: 0 35px;
+    height: 35px;
+    display: inline-flex;
+}
+
+.volume {
+    margin-left: 10px;
+    flex: 3 100px;
+    display: flex;
+}
+
+.volume-btn {
+    display: inline-flex;
+    flex: 0 35px;
+}
+
+.volume-range {
+    margin-left: 5px;
+    width: 100%;
+    padding-top: 1px;
+}
+
+.volume-range input{
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 8px;
+    margin: 0;
+}
+
+.track{
+    margin-left: 10px;
+    display: inline-flex;
+    padding-left: 20px;
+    flex: 7 150px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.track-span {
+    color: white;
+    font-size: 20px;
+    width:100%;
+    padding-left:100%;
+    display:inline-block;
+    -webkit-animation: track 10s infinite linear;
+    animation: track 10s infinite linear;
+}
+
+@-webkit-keyframes track {
+    0%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(-100%, 0);}
+}
+
+@keyframes track{
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-100%, 0)}
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.footer {
+    height: 90px;
+    background: black;
+}
+
+.rights{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    flex: 1 150px;
+    align-self: center;
+}
+
+.telegram-link {
+    flex: 0 35px;
+    align-self: center;
+    margin-right: 20px;
+}
