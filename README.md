@@ -2,4 +2,4 @@
 
 
 ## View
-![](img/screenshot.jpeg)
+![](img/view-screenshot.jpeg)
