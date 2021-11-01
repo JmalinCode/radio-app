@@ -2,4 +2,4 @@
 
 
 ## View
-![](img/radio-app.jpeg)
+![](img/screenshot.jpeg)

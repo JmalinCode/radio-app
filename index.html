@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class=wrapper>
-        <header class=header>
+    <div class="wrapper">
+        <header class="header">
             <div class="container">
-                <div class=logo-div>
-                    <img class=logo src="img/vinyl-header-logo.png" alt="">
+                <div class="logo-div">
+                    <img class="logo" src="img/vinyl-header-logo.png" alt="">
                 </div>
-                <div class=radio-tools-container>
-                    <div class=play-pause-btn>
+                <div class="radio-tools-container">
+                    <div class="play-pause-btn">
                         <img id="play-pause-btn" src='img/play.png'/>
                     </div>
-                    <div class=track>
-                        <span class=track-span id="track">Rick Astley - Never Gonna Give You Up(cover)</span>
+                    <div class="track">
+                        <span class="track-span" id="track">Rick Astley - Never Gonna Give You Up(cover)</span>
                     </div>
                     <div class="volume">
                         <div class=volume-btn>
@@ -34,17 +34,34 @@
             </div>
         </header>
 
-        <div class=main>
+        <div class="main">
+            <div class="container">
+                <div class="recent-tracks" id="recent-tracks">
+                    <div class="recent-tracks-title">
+                        <span>Recent</span>
+                    </div>
+                    <!-- example div, delete later with django -->
+                    <div class="recent-track">
+                        <div class="recent-track-time">
+                            <span>15:10</span>
+                        </div>
+                        <div class="recent-track-name">
+                            <span>Nirvana - Heart-Shaped Box</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <audio id="audioPlayer">
                 <source src="Astley.mp3">
             </audio>
         </div>
-        <footer class=footer>
+
+        <footer class="footer">
             <div class="container">
-                <div class=rights>
+                <div class="rights">
                     <span> No rights reserved. Copyright 2021 © RadioFM </span>
                 </div>
-                <div class=telegram-link>
+                <div class="telegram-link">
                     <a target="_blank" href="https://t.me/samasya0n">
                         <img src="img/telegram-icon.png">
                     </a>

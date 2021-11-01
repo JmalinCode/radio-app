@@ -40,4 +40,31 @@ volumeRange.oninput = function (){
 
 }
 
+recentTracksDiv = document.getElementById("recent-tracks");
+
+const songs = new Map([
+    ['15-03', 'Soundgarden - Blow Up The Outside World'],
+    ['14-59', 'System Of A Down - Lonely Day'],
+    ['14-55', 'Radiohead - Karma Police'],
+    ['14-50', 'The Cranberries - Zombie'],
+])
+
+
+// delete later
+for ([key, value] of songs){
+    let newTrack = document.createElement("div");
+    newTrack.className = "recent-track";
+    newTrack.innerHTML = `
+        <div class="recent-track-time">
+            <span>${key}</span>
+        </div>
+        <div class="recent-track-name">
+            <span>${value}</span>
+        </div>
+    `;
+    recentTracksDiv.appendChild(newTrack);
+}
+
+
+
 
