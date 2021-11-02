@@ -5,6 +5,8 @@ let track = document.getElementById('track');
 let volume;
 let audioPlayer = document.getElementById('audioPlayer');
 
+audioPlayer.volume = +volumeRange.value/100
+
 
 playPauseButton.onclick = function (){
     if (playPauseButton.src.slice(-8) === 'play.png') {
