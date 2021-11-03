@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadioFm</title>
+    <link rel="shortcut icon" href="img/vinyl-header.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -11,21 +12,21 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <div class="logo-div">
-                    <img class="logo" src="img/vinyl-header-logo.png" alt="">
+                <div class="logo">
+                    <img class="logo_img" src="img/vinyl-header-logo.png" alt="">
                 </div>
-                <div class="radio-tools-container">
-                    <div class="play-pause-btn">
+                <div class="radio_tools_container">
+                    <div class="play_pause_btn">
                         <img id="play-pause-btn" src='img/play.png'/>
                     </div>
-                    <div class="track">
-                        <span class="track-span" id="track">Rick Astley - Never Gonna Give You Up</span>
+                    <div id="playing-track-div" class="playing_track">
+                        <span id="playing-track" class="playing_track_span">Rick Astley - Never Gonna Give You Up</span>
                     </div>
                     <div class="volume">
-                        <div class=volume-btn>
+                        <div class=volume_btn>
                             <img id="volume-btn" src='img/volume-on.png'/>
                         </div>
-                        <div class="volume-range">
+                        <div class="volume_range">
                             <input id="volume-range" type="range" value="20">
                         </div>  
                     </div>
@@ -34,17 +35,17 @@
         </header>
 
         <div class="main">
-            <div class="container">
-                <div class="recent-tracks" id="recent-tracks">
-                    <div class="recent-tracks-title">
+            <div id="container-main" class="container_main">
+                <div id="recent-tracks" class="main_box">
+                    <div class="main_box_title">
                         <span>Recent</span>
                     </div>
                     <!-- example div, delete later with django -->
-                    <div class="recent-track">
-                        <div class="recent-track-time">
+                    <div class="recent_track">
+                        <div class="recent_track_time">
                             <span>15:10</span>
                         </div>
-                        <div class="recent-track-name">
+                        <div>
                             <span>Nirvana - Heart-Shaped Box</span>
                         </div>
                     </div>
@@ -57,10 +58,10 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="rights">
+                <div class="footer_rights">
                     <span> No rights reserved. Copyright 2021 © RadioFM </span>
                 </div>
-                <div class="telegram-link">
+                <div class="footer_telegram_link">
                     <a target="_blank" href="https://t.me/samasya0n">
                         <img src="img/telegram-icon.png">
                     </a>

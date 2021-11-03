@@ -1,7 +1,6 @@
 let playPauseButton = document.getElementById('play-pause-btn');
 let volumeRange = document.getElementById("volume-range");
 let volumeButton = document.getElementById('volume-btn');
-let track = document.getElementById('track');
 let volume;
 let audioPlayer = document.getElementById('audioPlayer');
 
@@ -44,6 +43,7 @@ volumeRange.oninput = function (){
 
 recentTracksDiv = document.getElementById("recent-tracks");
 
+// delete later
 const songs = new Map([
     ['15:03', 'Soundgarden - Blow Up The Outside World'],
     ['14:59', 'System Of A Down - Lonely Day'],
@@ -51,18 +51,34 @@ const songs = new Map([
     ['14:50', 'The Cranberries - Zombie'],
 ])
 
-
-// delete later
 for ([key, value] of songs){
     let newTrack = document.createElement("div");
-    newTrack.className = "recent-track";
+    newTrack.className = "recent_track";
     newTrack.innerHTML = `
-        <div class="recent-track-time">
+        <div class="recent_track_time">
             <span>${key}</span>
         </div>
-        <div class="recent-track-name">
+        <div class="recent_track_name">
             <span>${value}</span>
         </div>
     `;
     recentTracksDiv.appendChild(newTrack);
+}
+
+if(/Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent)){
+    trackDiv = document.getElementById("playing-track-div");
+    let platingNowName = trackDiv.textContent 
+    trackDiv.remove()
+    mainContainer = document.getElementById("container-main");
+    let playingTrackDiv = document.createElement("div");
+    playingTrackDiv.className = "main_box"
+    playingTrackDiv.innerHTML = `
+        <div class="main_box_title">
+            <span>Playing now</span>
+        </div>
+        <div class="recent_track">
+            <span id="playing-track">${platingNowName}</span>
+        </div>
+    `;
+    mainContainer.insertBefore(playingTrackDiv, recentTracksDiv)
 }
